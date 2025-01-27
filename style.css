@@ -1,0 +1,100 @@
+
+.main-menu{
+list-style: none;
+text-align: center;
+}
+.main-menu-item{
+display: inline;
+margin: 0 1em;
+position:relative ;
+padding-bottom: 30px;
+}
+.maim-wrapper{
+    min-width: 720px;
+width: 45%;
+margin: auto
+}
+.main-menu-item>a{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 10px 0;
+}
+.main-menu-item>a:hover{
+    text-decoration: underline;
+}
+.main-menu-item>.submenu::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #FFFFFF transparent;
+  top: -24Px;
+  left: 42%;
+}
+main{
+    margin-top: -150px;
+}
+.submenu{
+display: none;
+width: 210%;
+list-style: none;
+padding: 7px;
+background-color: rgb(148, 148, 148);
+left: -50%;
+top: 30px;
+position: absolute;
+
+}
+.submenu-link{
+display: block;
+text-transform: capitalize;
+padding: 5px 9px;
+color: black;
+}
+.submenu-item{
+position: relative;
+}
+.submenu-item:has(>.submenu)::after{
+  content: '\1433';
+  position: absolute;
+  top: 10px ;
+  right: 0;
+}
+.main-menu-item:hover>.submenu{
+    display: block;
+  }
+  .width-Travel-Agency{
+    width: 150% ;
+    left: -30%;
+  }
+  .width-SERVICE-AND-SHOP{
+    width: 100%;
+    left:0;
+  }
+  .submenu-item:hover>.submenu{
+    display: block;
+    left: 100%;
+    top: 0%;
+  }
+  .submenu-item:hover>.submenu-link,
+  .submenu-link:hover{
+background-color:rgb(255, 0, 0);
+color: rgb(255, 255, 255)
+  }
+  .explore::before{
+    content: url(./../icons/book-open-blank-variant.svg);
+    display: inline-block;
+    width: 14px;
+    transform: translate(-5px,2px);
+  }
+  
+  .main-menu-item::after{
+    content:'\25BC';
+  }
+nav{
+    background-color:rgb(59, 59, 59);
+}
