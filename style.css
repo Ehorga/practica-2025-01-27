@@ -1,100 +1,157 @@
-
-.main-menu{
-list-style: none;
-text-align: center;
+.main-menu {
+  list-style: none;
+  text-align: center;
 }
-.main-menu-item{
-display: inline;
-margin: 0 1em;
-position:relative ;
-padding-bottom: 30px;
+.main-menu-item {
+  display: inline;
+  margin: 0 1em;
+  position: relative;
+  padding-bottom: 30px;
 }
-.maim-wrapper{
-    min-width: 720px;
-width: 45%;
-margin: auto
+.maim-wrapper {
+  min-width: 720px;
+  width: 45%;
+  margin: auto;
 }
-.main-menu-item>a{
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    font-weight: bolder;
-    text-decoration: none;
-    padding: 10px 0;
+.main-menu-item > a {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 10px 0;
 }
-.main-menu-item>a:hover{
-    text-decoration: underline;
+.main-menu-item > a:hover {
+  text-decoration: underline;
 }
-.main-menu-item>.submenu::after{
+.main-menu-item > .submenu::after {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
   border-width: 10px;
   border-style: solid;
-  border-color: transparent transparent #FFFFFF transparent;
-  top: -24Px;
+  border-color: transparent transparent #ffffff transparent;
+  top: -24px;
   left: 42%;
 }
-main{
-    margin-top: -150px;
+main {
+  margin-top: -150px;
 }
-.submenu{
-display: none;
-width: 210%;
-list-style: none;
-padding: 7px;
-background-color: rgb(148, 148, 148);
-left: -50%;
-top: 30px;
-position: absolute;
-
-}
-.submenu-link{
-display: block;
-text-transform: capitalize;
-padding: 5px 9px;
-color: black;
-}
-.submenu-item{
-position: relative;
-}
-.submenu-item:has(>.submenu)::after{
-  content: '\1433';
+.submenu {
+  display: none;
+  width: 210%;
+  list-style: none;
+  padding: 7px;
+  background-color: rgb(148, 148, 148);
+  left: -50%;
+  top: 30px;
   position: absolute;
-  top: 10px ;
-  right: 0;
 }
-.main-menu-item:hover>.submenu{
-    display: block;
+.submenu-link {
+  display: block;
+  text-transform: capitalize;
+  padding: 5px 9px;
+  color: black;
+}
+.submenu-item {
+  position: relative;
+}
+.submenu-item:has(> .submenu)::after {
+  content: "\1433";
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+.main-menu-item:hover > .submenu {
+  display: block;
+}
+.width-Travel-Agency {
+  width: 150%;
+  left: -30%;
+}
+.width-SERVICE-AND-SHOP {
+  width: 100%;
+  left: 0;
+}
+.submenu-item:hover > .submenu {
+  display: block;
+  left: 100%;
+  top: 0%;
+}
+.submenu-item:hover > .submenu-link,
+.submenu-link:hover {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.explore::before {
+  content: url(./../icons/book-open-blank-variant.svg);
+  display: inline-block;
+  width: 14px;
+  transform: translate(-5px, 2px);
+}
+
+.main-menu-item::after {
+  content: "\25BC";
+  color: #ffffff;
+}
+nav {
+  background-color: rgb(59, 59, 59);
+}
+.message {
+  position: fixed;
+  z-index: 100;
+  top: -150px;
+  left: 50%;
+  background-color: green;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: slide-in 4s ease;
+}
+@keyframes slide-in {
+  0% {
+    top: -150px;
+    opacity: 0;
   }
-  .width-Travel-Agency{
-    width: 150% ;
-    left: -30%;
+  20% {
+    top: 150px;
+    opacity: 1;
   }
-  .width-SERVICE-AND-SHOP{
-    width: 100%;
-    left:0;
+  80% {
+    top: 150px;
+    opacity: 1;
   }
-  .submenu-item:hover>.submenu{
-    display: block;
-    left: 100%;
-    top: 0%;
+  100% {
+    top: -150px;
+    opacity: 0;
   }
-  .submenu-item:hover>.submenu-link,
-  .submenu-link:hover{
-background-color:rgb(255, 0, 0);
-color: rgb(255, 255, 255)
+}
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  animation: pulse 3s steps(5) infinite alternate;
+}
+@keyframes pulse {
+  0% {
+    background-color: aqua;
+    transform: scale(1);
   }
-  .explore::before{
-    content: url(./../icons/book-open-blank-variant.svg);
-    display: inline-block;
-    width: 14px;
-    transform: translate(-5px,2px);
+  100% {
+    background-color: black;
+    transform: scale(2);
+
   }
-  
-  .main-menu-item::after{
-    content:'\25BC';
-  }
-nav{
-    background-color:rgb(59, 59, 59);
+}
+.w-100{
+  width: 100%;
 }
